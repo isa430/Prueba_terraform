@@ -3,17 +3,16 @@ provider "google" {
   region        = var.region
 }
 
-resource "google_storage_bucket" "dev_env" {
-  name          = var.bucket_name
-  project       = var.proj_id
+module "dev_gcs_bucket" {
+  source        = "terraform-google-modules/cloud-storage/google"
+  version       = "~> 2.2"
+  names         = ["bkt-dev-env-1", "bkt-dev-env-2" ]
+  project_id    = var.proj_id
+  prefix        = "my-unique-prefix"
   #storage_class = var.storage_class
   location      = var.bucket_region
-  force_destroy = true
-
-  uniform_bucket_level_access = true
 
   labels = {
     environment = var.environment
   }
 }
-
