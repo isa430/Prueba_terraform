@@ -3,7 +3,7 @@ provider "google" {
   region        = var.region
 }
 
-resource "google_storage_bucket" "static-site" {
+resource "google_storage_bucket" "prod_env" {
   name          = var.bucket_name
   project       = var.proj_id
   #storage_class = var.storage_class

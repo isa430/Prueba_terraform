@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-proj_id         = "prj-dgtl-d-dcipocp2-a8c6"
-bucket_name     = "stat_bucket" 
-region          = "us-east1"
-bucket_region   = "US"
-storage_class   = "REGIONAL" 
+terraform {
+  backend "gcs" {
+    bucket = "bkt-tfstate-dev" // update me
+    prefix = "prod/state"
+  }
+}
