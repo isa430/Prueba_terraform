@@ -1,0 +1,11 @@
+# Service Account Credentials
+sa.json
+
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+*.lock.hcl
