@@ -20,4 +20,4 @@ region          = "us-east1"
 bucket_region   = "US"
 storage_class   = "REGIONAL" 
 
-environment = "dev"
+environment     = "dev"

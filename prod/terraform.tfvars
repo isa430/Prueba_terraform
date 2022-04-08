@@ -19,5 +19,3 @@ bucket_name     = "bkt-prod-env"
 region          = "us-east1"
 bucket_region   = "US"
 storage_class   = "REGIONAL" 
-
-environment = "prod"

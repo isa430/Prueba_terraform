@@ -16,3 +16,4 @@ resource "google_storage_bucket" "dev_env" {
     environment = var.environment
   }
 }
+
